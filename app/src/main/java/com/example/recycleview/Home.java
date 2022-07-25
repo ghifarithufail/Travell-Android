@@ -24,16 +24,17 @@ public class Home extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        lawangsewu = (ImageButton) findViewById(R.id.semarang);
-        wakatobi = (ImageButton) findViewById(R.id.wakatobipic);
-        tanahlot = (ImageButton) findViewById(R.id.tanahlotpic);
-        bromo = (ImageButton) findViewById(R.id.bromopic);
-        sentani = (ImageButton) findViewById(R.id.sentanipic);
-        pulauk = (ImageButton) findViewById(R.id.pulaukpic);
+        lawangsewu  = (ImageButton) findViewById(R.id.semarang);
+        wakatobi    = (ImageButton) findViewById(R.id.wakatobipic);
+        tanahlot    = (ImageButton) findViewById(R.id.tanahlotpic);
+        bromo       = (ImageButton) findViewById(R.id.bromopic);
+        sentani     = (ImageButton) findViewById(R.id.sentanipic);
+        pulauk      = (ImageButton) findViewById(R.id.pulaukpic);
 
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView
+                .OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
