@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,11 +43,11 @@ public class Payment extends AppCompatActivity {
         dateT    = findViewById(R.id.DateT);
         birthday = findViewById(R.id.Birthday);
         fn       = findViewById(R.id.FN);
-        ln       = findViewById(R.id.LN);
+        ln       = findViewById(R.id.City);
         email    = findViewById(R.id.Email);
         address  = findViewById(R.id.Address);
-        phone    = findViewById(R.id.Phone);
-        city     = findViewById(R.id.City);
+        phone    = findViewById(R.id.LN);
+        city     = findViewById(R.id.Phone);
         state    = findViewById(R.id.State);
         paybtn   = findViewById(R.id.Pay);
         BACK     = findViewById(R.id.back);
@@ -60,7 +61,7 @@ public class Payment extends AppCompatActivity {
         BACK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Payment.this, MainActivity.class));
+                startActivity(new Intent(Payment.this, Traveller.class));
             }
         });
 
@@ -122,7 +123,8 @@ public class Payment extends AppCompatActivity {
                     Db database = new Db(FN,LN,BD,DT,EM,AD,PH,CI,ST );
 
                     reference.child(FN).setValue(database);
-                    startActivity(new Intent(Payment.this, Data.class));
+                    startActivity(new Intent(Payment.this, Home.class));
+                    Toast.makeText(Payment.this, "Your Booking is successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });

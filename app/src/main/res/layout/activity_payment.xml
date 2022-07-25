@@ -268,7 +268,7 @@
                         android:elevation="10dp"
                         android:ems="10"
                         android:hint="Input Payment"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:paddingStart="10dp"
                         app:layout_constraintEnd_toEndOf="@+id/LN"
                         app:layout_constraintStart_toStartOf="@+id/FN"

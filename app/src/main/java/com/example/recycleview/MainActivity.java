@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnLogin;
+    Button btnLogin,btnBack;
     FirebaseAuth mAuth;
     TextView email, pw;
 
@@ -26,8 +27,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLogin = findViewById(R.id.login);
-        email = findViewById(R.id.email);
-        pw = findViewById(R.id.pass);
+        email    = findViewById(R.id.email);
+        pw       = findViewById(R.id.pass);
+        btnBack  = findViewById(R.id.back);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),
+                        Home.class));
+            }
+        });
 
         mAuth = FirebaseAuth.getInstance();
 

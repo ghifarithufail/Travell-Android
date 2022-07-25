@@ -10,12 +10,7 @@
         android:title="Travelling"
         android:icon="@drawable/pesawat"
         android:iconTint="@color/white"/>
-
-    <item android:id="@+id/reservation"
-        android:title="Reservation"
-        android:icon="@drawable/plan"
-        android:iconTint="@color/white"/>
-
+    
     <item android:id="@+id/admin"
         android:title="Admin"
         android:icon="@drawable/user"

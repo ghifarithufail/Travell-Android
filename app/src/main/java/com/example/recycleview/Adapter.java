@@ -65,7 +65,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.firstname.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
-                        .setExpanded(true,2100)
+                        .setExpanded(true,2000)
                         .create();
 
                 //dialogPlus.show();
