@@ -129,10 +129,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                                 });
                     }
                 });
-
-
             }
-
         });
 
 
@@ -172,9 +169,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return list.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView firstname,lastname,dateTravell;
+        TextView    firstname,lastname,dateTravell;
         Button MENU;
         private static final String TAG = "MyViewHolder";
 
@@ -187,43 +184,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             firstname = itemView.findViewById(R.id.Fname);
             lastname = itemView.findViewById(R.id.Lname);
             dateTravell = itemView.findViewById(R.id.DateT);
-            MENU = itemView.findViewById(R.id.Menu);
-            MENU.setOnClickListener(this);
+
 
             btnedit   = (Button)itemView.findViewById(R.id.btnEdit);
             btndelete = (Button)itemView.findViewById(R.id.btnDelete);
         }
 
-        @Override
-        public void onClick(View v) {
-            showPopupMenu(v);
-        }
-
-        private void showPopupMenu(View view){
-            PopupMenu popupMenu = new PopupMenu(view.getContext(), view);
-            popupMenu.inflate(R.menu.option_menu);
-            popupMenu.setOnMenuItemClickListener(this);
-            popupMenu.show();
-        }
 
 
 
 
-        @Override
-        public boolean onMenuItemClick(MenuItem item) {
-            switch (item.getItemId()){
-                case R.id.edit:
-                    Intent intent = new Intent(context,MainActivity.class);
-                    context.startActivity(intent);
-                    return true;
-
-                case R.id.remove:
-                    Log.d(TAG, "onMenuItemClick : remove");
-                    return true;
-
-                default:
-                    return false;
-            }
-        }
     }
 }

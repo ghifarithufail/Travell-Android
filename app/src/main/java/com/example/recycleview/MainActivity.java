@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(view -> {
             loginUser();
         });
-
     }
 
     private void loginUser() {

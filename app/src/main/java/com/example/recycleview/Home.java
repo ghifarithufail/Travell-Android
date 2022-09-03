@@ -13,8 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
 
-
-
     ImageButton lawangsewu, wakatobi, tanahlot, bromo, sentani, pulauk;
 
     @Override
